@@ -1,0 +1,110 @@
+{
+  "message": "Successfully in call api",
+  "data": {
+    "zammad": [],
+    "glpi": [
+      {
+        "id": 123210,
+        "entities_id": 3,
+        "name": "Zabbix não retorno após backup",
+        "date": "2020-08-10 12:00:49",
+        "closedate": null,
+        "solvedate": null,
+        "date_mod": "2020-08-20 02:34:54",
+        "users_id_lastupdater": 7,
+        "status": 2,
+        "users_id_recipient": 15,
+        "requesttypes_id": 1,
+        "content": "&lt;p&gt;Prezados, bom dia!&lt;/p&gt;&lt;p&gt;Estamos com um problema no backup do zabbix que roda na madrugada de sábado para domingo.&lt;/p&gt;&lt;p&gt;O serviço do zabbix não volta, sendo necessário acessar o servidor, matar os processos do zabbix e startar o serviço do zabbix server.&lt;/p&gt;&lt;p&gt;2 finais de semana seguidos que esse problema ocorre.&lt;/p&gt;",
+        "urgency": 4,
+        "impact": 3,
+        "priority": 4,
+        "itilcategories_id": 17,
+        "type": 1,
+        "global_validation": 1,
+        "slas_id_ttr": 0,
+        "slas_id_tto": 0,
+        "slalevels_id_ttr": 0,
+        "time_to_resolve": null,
+        "time_to_own": null,
+        "begin_waiting_date": null,
+        "sla_waiting_duration": 0,
+        "ola_waiting_duration": 0,
+        "olas_id_tto": 0,
+        "olas_id_ttr": 0,
+        "olalevels_id_ttr": 0,
+        "ola_ttr_begin_date": null,
+        "internal_time_to_resolve": null,
+        "internal_time_to_own": null,
+        "waiting_duration": 0,
+        "close_delay_stat": 0,
+        "solve_delay_stat": 0,
+        "takeintoaccount_delay_stat": 63324,
+        "actiontime": 0,
+        "is_deleted": 0,
+        "locations_id": 0,
+        "validation_percent": 0,
+        "date_creation": "2020-08-10 12:00:49",
+        "links": [
+          {
+            "rel": "Entity",
+            "href": "http://support.trulymanager.com/apirest.php/Entity/3"
+          },
+          {
+            "rel": "User",
+            "href": "http://support.trulymanager.com/apirest.php/User/7"
+          },
+          {
+            "rel": "User",
+            "href": "http://support.trulymanager.com/apirest.php/User/15"
+          },
+          {
+            "rel": "RequestType",
+            "href": "http://support.trulymanager.com/apirest.php/RequestType/1"
+          },
+          {
+            "rel": "ITILCategory",
+            "href": "http://support.trulymanager.com/apirest.php/ITILCategory/17"
+          },
+          {
+            "rel": "Document_Item",
+            "href": "http://support.trulymanager.com/apirest.php/Ticket/123210/Document_Item/"
+          },
+          {
+            "rel": "TicketTask",
+            "href": "http://support.trulymanager.com/apirest.php/Ticket/123210/TicketTask/"
+          },
+          {
+            "rel": "TicketValidation",
+            "href": "http://support.trulymanager.com/apirest.php/Ticket/123210/TicketValidation/"
+          },
+          {
+            "rel": "TicketCost",
+            "href": "http://support.trulymanager.com/apirest.php/Ticket/123210/TicketCost/"
+          },
+          {
+            "rel": "Problem_Ticket",
+            "href": "http://support.trulymanager.com/apirest.php/Ticket/123210/Problem_Ticket/"
+          },
+          {
+            "rel": "Change_Ticket",
+            "href": "http://support.trulymanager.com/apirest.php/Ticket/123210/Change_Ticket/"
+          },
+          {
+            "rel": "Item_Ticket",
+            "href": "http://support.trulymanager.com/apirest.php/Ticket/123210/Item_Ticket/"
+          },
+          {
+            "rel": "ITILSolution",
+            "href": "http://support.trulymanager.com/apirest.php/Ticket/123210/ITILSolution/"
+          },
+          {
+            "rel": "ITILFollowup",
+            "href": "http://support.trulymanager.com/apirest.php/Ticket/123210/ITILFollowup/"
+          }
+        ]
+      }
+    ]
+  },
+  "status": 200
+}

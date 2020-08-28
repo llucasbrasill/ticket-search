@@ -1,0 +1,78 @@
+.searchNumber {
+  margin: 15px;
+}
+
+  /* Loading */
+  
+  .animeLoadingData {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    animation: animeLoadingData 0.5s cubic-bezier(0.65, 0.15, 1, 1) infinite;
+    animation-direction: alternate;
+    border-radius: 0;
+    max-height: 5px;
+    min-width: 200px;
+    margin: 5px 0;
+  }
+  .animeLoading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    align-items: center;
+    border-radius: 5px;
+    animation: animeLoading 0.8s cubic-bezier(0.65, 0.15, 1, 1) infinite;
+    animation-delay: 1s;
+    animation-direction: alternate;
+  }
+
+  
+
+  @keyframes animeLoadingData {
+    0% {
+      background-color: #f5f5f5;
+    }
+    50% {
+      background-color: #f9f9f9;
+    }
+  }
+  
+  @keyframes animeLoading {
+    0% {
+      background-color: #ffffff;
+    }
+    100% {
+      background-color: #f5f5f5;
+    }
+  }
+
+  .ldsDualRing {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .ldsDualRing:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #e8e8e8;
+    border-color: #e8e8e8 transparent #e8e8e8 transparent;
+    animation: ldsDualRing 1.2s linear infinite;
+  }
+  @keyframes ldsDualRing {
+    0% {
+      
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
