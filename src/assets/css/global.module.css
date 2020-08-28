@@ -1,5 +1,6 @@
 html, body {
-  background: #ffffff;
+  background: rgb(103,150,108);
+background: linear-gradient(90deg, rgba(103,150,108,1) 0%, rgba(89,182,99,1) 16%, rgba(79,161,87,1) 33%, rgba(95,168,103,1) 84%, rgba(103,150,108,1) 100%);
   margin: 0;
   height: 100%;
 }
@@ -17,7 +18,8 @@ body > div {
   margin: 0px;
   padding: 0px;
   outline: 0px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: #54595e;
 }
 
 main {
@@ -46,16 +48,22 @@ main {
   background: #fdfdfd;
 }
 ul li {
-  max-width: none;
-    justify-content: left!important;
-    text-decoration: none;
-    list-style: none;
-    margin: 0 15px;
-    padding: 10px 0;
+  max-width: 200px;
+  justify-content: left!important;
+  text-decoration: none;
+  list-style: none;
+  margin: 0 15px;
+  padding: 10px 0;
+  min-width: 200px;
 }
 
 ul li > p > span {
   display: block;
+  color: #10233e;
+}
+
+ul li > p > b {
+  color: #51a556;
 }
 .animeLoadingData {
   color: #f9f9f9;
@@ -74,6 +82,7 @@ ul li > p > span {
 
 .ticketNumber {
   margin: 15px;
+  width: 100%;
 }
 
 .ticketTitle, .ticketDescription {

@@ -10,7 +10,6 @@ import Main from "../layout/main";
 // Compoenents  
 import TitleSearch from "../components/TitleSearch";
 import InputSearch from "../components/InputSearch";
-import FalidLoading from '../components/SearchDetails/FalidLoading';
 import LoadingDetails from '../components/SearchDetails/loadingSearch';
 
 const SearchDetails = React.lazy(() => import('../components/SearchDetails/SearchDetails'));
@@ -23,9 +22,7 @@ const TicketPage = () => {
   const { data, loading, error, request } = fetchSearch();
   const [ticketLoading, setTicketLoading] = React.useState(false);
   const [search, setSearch] = React.useState(null);
-  const [typing, setTyping] = React.useState(false)
-
-
+  const [typing, setTyping] = React.useState(false);
 
   function handleChange({ target }) {
     let { value } = target;
@@ -36,7 +33,9 @@ const TicketPage = () => {
     event.preventDefault();
     setTicketLoading(false);
     getData();
-    (search && navigate(`/ticket/${search}`)) || (navigate("/"));
+    (search && navigate(`/${search}`));
+
+
 
   }
 
@@ -57,12 +56,15 @@ const TicketPage = () => {
           });
         }
         (data) && (setTicketLoading(false));
+
       }
     }
   }
 
   React.useEffect(() => {
+
     getData();
+    // eslint-disable-next-line
   }, [handleSubmit]);
 
   React.useEffect(() => {
@@ -70,14 +72,15 @@ const TicketPage = () => {
       setTyping(false)
     }, 200)
     setTyping(true);
-    search && navigate(`/ticket/${search}`);
+    search && navigate(`/${search}`);
+    (!search && navigate("/"));
     return () => (clearTimeout(delayDebounceFn));
+    // eslint-disable-next-line
   }, [search])
 
 
 
 
-  const FalidLoadingCheck = params.id && !loading && !error && !data && !typing;
   const DataLoadingCheck = data && !loading;
   const DataSuspene = (<React.Suspense fallback={<div>Carregando...</div>}>
     <SearchDetails data={data} search={search} />
@@ -92,14 +95,12 @@ const TicketPage = () => {
     <>
       <Main search={search}>
         <TitleSearch />
-        <InputSearch search={search} handleChange={handleChange} handleSubmit={handleSubmit} />
 
-        {typing && <LoadingDetails />}
+        {<InputSearch search={search} handleChange={handleChange} handleSubmit={handleSubmit} />}
 
-        {FalidLoadingCheck && (search === params.id) && < FalidLoading search={search} />}
+        {!data && typing && <LoadingDetails />}
 
-        {DataLoadingCheck && search && !typing && DataSuspene}
-
+        {DataLoadingCheck && search && DataSuspene}
 
         {(loading && <LoadingDetails />) || ((error && !data && "Error ao conectar com a API") || (!data && !loading))}
 

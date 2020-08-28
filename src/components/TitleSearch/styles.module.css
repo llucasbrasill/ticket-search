@@ -1,3 +1,9 @@
 .TitleSearch {
   text-align: center;
+  font-weight: 200;
+  color: #fdfdfd;
+}
+
+.TitleSearch b {
+  font-weight: 500;
 }

@@ -4,10 +4,11 @@ import style from "../../assets/css/global.module.css";
 
 const SearchDetails = ({ data, search }) => {
 
-  if (data.id === search) return (
-    <div>
-      <h2 className={style.ticketNumber}><b>Chamdo # {data.id}</b></h2>
+  return (
+    data && <div>
+
       <ul>
+        < h2 className={style.ticketNumber} > <b>Chamdo # {data.id}</b></h2>
         <li><p> <b>Data de abertura:</b> <span>{data.date_creation}</span></p></li>
         <li><p> <b>Tempo de Solução:</b> <span>{data.date}</span></p></li>
         <li><p> <b>Data de Solução:</b> <span>{data.solvedate && data.solvedate}</span></p></li>
@@ -25,11 +26,8 @@ const SearchDetails = ({ data, search }) => {
             <span dangerouslySetInnerHTML={{ __html: parser(data.content) }} ></span></p>
         </li>
       </ul>
-    </div>
+    </div >
   )
-  return null;
 }
-
-
 
 export default SearchDetails;
